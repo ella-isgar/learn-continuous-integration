@@ -6,7 +6,7 @@ Read the complete reference to [Github Actions Workflow Syntax](https://docs.git
 
 ## Repository structure
 
-The repository has a Node server (`server.ts`) written using the Express framework. The server provides REST APIs to query books, authors, and details about specific books and authors. The services use a MongoDB database to store related data. The schema for the relevant MongoDB collections are defined in `models/`. The Express services communicate with the underlying MongoDB collections using the ORM/ODM Mongoose layer. Additonally, the `tests/` directory has a few Jest tests to verify the behavior of some of the services. 
+The repository has a Node server (`server.ts`) written using the Express framework. The server provides REST APIs to query books, authors, and details about specific books and authors. The services use a MongoDB database to store related data. The schema for the relevant MongoDB collections are defined in `models/`. The Express services communicate with the underlying MongoDB collections using the ORM/ODM Mongoose layer. Additonally, the `tests/` directory has a few Jest tests to verify the behavior of some of the services.
 
 ## Setup Actions
 
@@ -15,9 +15,9 @@ One can setup any GitHub repository with GitHub Actions. This means based on eve
 - In your forked repo naviagte to the **Settings** tab.
 - In **Settings**, navigate to **Actions/Runner** on the left pane.
 - It will say you have no runners configured.
-- Click on **New self-hosted runner**. 
+- Click on **New self-hosted runner**.
 - Follow the instructions to setup and start the runner.
-- When you configure the runner and start it, it will be listed the Runners page saying __Idle__ with a green color indicating is up and running.
+- When you configure the runner and start it, it will be listed the Runners page saying **Idle** with a green color indicating is up and running.
 - When the YAML workflow described below runs, it will run on this self-hosted runner, which happens to be your machine.
 
 By following the above steps, you will have configured your machine to be self-hosted actions runner. A similar concept applies for runners configured to run on cloud servers.
@@ -26,7 +26,7 @@ By following the above steps, you will have configured your machine to be self-h
 
 Imagine a team of developers working on this project. Anytime they make a change, they need to ensure that the existing functionality did not break. Hence, they design an automatic workflow that does the following:
 
-Everytime code is pushed to the main branch, all jest tests run  and a report of the run is published for all team members to view. If the tests fail then the repository is in a bad state and needs to be fixed immediately before proceeding.
+Everytime code is pushed to the main branch, all jest tests run and a report of the run is published for all team members to view. If the tests fail then the repository is in a bad state and needs to be fixed immediately before proceeding.
 
 The team also maintains a deploy branch. This branch needs to be kept in a valid state at all times because, code from this branch is used in production. Therefore, the above workflow also gets triggered when a pull request is made to the deploy branch.
 
@@ -34,7 +34,7 @@ All this represented in the `.github/workflows/main.yml` file.
 
 ## For you to do
 
-First setup your machine or your teammate's machine to be the self hosted runner using the instructions in __Setup__.
+First setup your machine or your teammate's machine to be the self hosted runner using the instructions in **Setup**.
 
 - Create a deploy branch if it doesn't already exist
 - Submit a pull request to the deploy branch from main
