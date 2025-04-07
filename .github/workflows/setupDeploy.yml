@@ -3,10 +3,6 @@ name: CI Tutorial
 on:
   push:
     branches:
-      - main
-
-  pull_request:
-    branches:
       - deploy
 
 jobs:
@@ -24,4 +20,3 @@ jobs:
 
       - name: Seed database
         run: npx ts-node seed_db.ts
-# test test
