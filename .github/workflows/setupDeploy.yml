@@ -1,0 +1,22 @@
+name: CI Tutorial
+
+on:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  "run-jest-tests":
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Delete the database
+        run: npx ts-node remove_db.ts
+
+      - name: Seed database
+        run: npx ts-node seed_db.ts
