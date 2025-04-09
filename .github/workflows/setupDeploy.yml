@@ -20,3 +20,4 @@ jobs:
 
       - name: Seed database
         run: npm run insert-sample-data -- "mongodb://127.0.0.1:27017/my_library_db"
+# adding comment to trigger "deploy" workflow
