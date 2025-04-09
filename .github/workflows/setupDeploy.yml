@@ -6,7 +6,7 @@ on:
       - deploy
 
 jobs:
-  "run-jest-tests":
+  "setup-database":
     runs-on: self-hosted
     steps:
       - name: Checkout Repository
