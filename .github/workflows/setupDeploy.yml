@@ -1,4 +1,4 @@
-name: CI Tutorial
+name: Prepare Database
 
 on:
   push:
@@ -15,8 +15,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Delete the database
-        run: npx ts-node remove_db.ts
+      - name: Delete old database
+        run: npm run remove-sample-data -- "mongodb://127.0.0.1:27017/my_library_db"
 
       - name: Seed database
-        run: npx ts-node seed_db.ts
+        run: npm run insert-sample-data -- "mongodb://127.0.0.1:27017/my_library_db"
